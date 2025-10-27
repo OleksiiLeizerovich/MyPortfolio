@@ -1,5 +1,13 @@
 {
-  "page": {
-    "vite": "vite + react"
+  "header": {
+    "name": "Portfolio",
+    "about": "About me",
+    "2": "Пункт 2",
+    "3": "Пункт 3",
+    "4": "Пункт 4"
+  },
+  "about-me": {
+    "name": "Leizerovich Oleksii",
+    "paragraph": "Hello! My name is Alexey. I am a Front-End developer by education. I have experience working with React JS and various NPM modules, including Ant Design. I love video games, animation, and music. I mainly play story-driven games, but I also play several multiplayer games with friends in my free time."
   }
 }

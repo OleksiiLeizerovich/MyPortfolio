@@ -1,0 +1,122 @@
+.about-me {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  // Колонка з фото
+  &__photo-col {
+    // На мобільних пристроях змінюємо порядок відображення
+    @media (max-width: 767px) {
+      order: 1;
+    }
+
+    @media (min-width: 768px) {
+      order: 2;
+    }
+  }
+
+  // Колонка з текстом
+  &__text-col {
+    @media (max-width: 767px) {
+      order: 2;
+    }
+
+    @media (min-width: 768px) {
+      order: 1;
+    }
+  }
+
+  // Обгортка для фото
+  &__photo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: 768px) {
+      justify-content: flex-end;
+    }
+  }
+
+  // Стилі для фото
+  &__photo {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    @media (max-width: 767px) {
+      max-width: 300px;
+    }
+  }
+
+  // Контент (текст)
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media (max-width: 767px) {
+      text-align: center;
+    }
+  }
+
+  // Ім'я
+  &__name {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 0 !important;
+    color: #1a1a1a;
+    line-height: 1.2;
+
+    @media (max-width: 767px) {
+      font-size: 36px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 28px;
+    }
+  }
+
+  // Опис
+  &__description {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 0 !important;
+
+    @media (max-width: 767px) {
+      font-size: 16px;
+    }
+  }
+
+  // Адаптація Row для зміни порядку на мобільних
+  .ant-row {
+    @media (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+// Загальні стилі для анімацій
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-me {
+  animation: fadeIn 0.8s ease-out;
+}

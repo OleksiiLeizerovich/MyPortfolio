@@ -1,0 +1,35 @@
+.app-header {
+  // Оскільки ви просили не створювати темну тему,
+  // ми примусово робимо фон світлим (стандартний antd header може бути темним).
+  background: #fff !important;
+  border-bottom: 1px solid #f0f0f0; // Додамо тонку лінію
+  padding: 0 24px; // Стандартні відступи antd
+
+  // Вмикаємо Flexbox для розміщення блоків
+  display: flex;
+  justify-content: space-between; // Розподіляємо простір між блоками
+  align-items: center;
+
+  // Визначаємо три колонки
+  .header-left, .header-right {
+    flex: 1; // Колонки займають однакову ширину
+  }
+
+  .header-center {
+    flex: 1; // Ви також можете встановити flex: 2; якщо хочете, щоб центр був ширшим
+    display: flex;
+    justify-content: center; // Центруємо плейсхолдери
+
+    // Стиль для тексту плейсхолдерів
+    .ant-typography {
+      color: rgba(0, 0, 0, 0.65); // Cтандартний другорядний колір тексту antd
+      font-weight: 500;
+      cursor: default; // Показуємо, що це не посилання
+    }
+  }
+
+  .header-right {
+    display: flex;
+    justify-content: flex-end; // Притискаємо кнопку до правого краю
+  }
+}
