@@ -2,9 +2,8 @@
   "header": {
     "name": "Portfolio",
     "about": "About me",
-    "2": "Пункт 2",
-    "3": "Пункт 3",
-    "4": "Пункт 4"
+    "experience": "My experience",
+    "contact": "Contact me"
   },
   "about-me": {
     "name": "Leizerovich Oleksii",
@@ -12,5 +11,8 @@
   },
   "experience": {
     "title": "My experience"
+  },
+  "contact": {
+    "title": "Contact me"
   }
 }

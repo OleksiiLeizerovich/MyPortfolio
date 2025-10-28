@@ -1,6 +1,7 @@
 import Header from '/src/components/Header';
 import AboutMe from "./components/AboutMe/index.jsx";
 import Experience from "./components/Experience/index.jsx";
+import Contacts from "./components/Contacts/index.jsx";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
         <Header />
         <AboutMe />
         <Experience />
+        <Contacts />
     </>
   )
 }

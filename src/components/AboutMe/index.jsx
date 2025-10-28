@@ -1,5 +1,4 @@
 import React from 'react';
-// Додаємо 'Image' та 'Space'
 import { Row, Col, Typography, Image, Space } from 'antd';
 import { useTranslation } from 'react-i18next';
 import './style.scss';
@@ -12,7 +11,6 @@ const AboutMe = () => {
     return (
         <div id="about" className="about-me">
             <Row gutter={[32, 32]} align="middle">
-                {/* --- Блок Фото --- */}
                 <Col xs={24} md={12} className="about-me__photo-col">
                     <div className="about-me__photo-wrapper">
                         <Image
@@ -23,13 +21,7 @@ const AboutMe = () => {
                     </div>
                 </Col>
 
-                {/* --- Блок Тексту --- */}
                 <Col xs={24} md={12} className="about-me__text-col">
-                    {/* ЗАМІНА 2:
-                      Використовуємо <Space> замість <div>.
-                      Це компонент antd для керування відступами між елементами.
-                      'direction="vertical"' ставить їх один під одним.
-                    */}
                     <Space direction="vertical" size="middle" className="about-me__content">
                         <Title level={1} className="about-me__name">
                             {t('about-me.name')}
