@@ -1,35 +1,58 @@
 .app-header {
-  // Оскільки ви просили не створювати темну тему,
-  // ми примусово робимо фон світлим (стандартний antd header може бути темним).
-  background: #fff !important;
-  border-bottom: 1px solid #f0f0f0; // Додамо тонку лінію
-  padding: 0 24px; // Стандартні відступи antd
+  position: sticky;
+  top: 0;
+  z-index: 100;
 
-  // Вмикаємо Flexbox для розміщення блоків
+  background: #fff !important;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 0 24px;
   display: flex;
-  justify-content: space-between; // Розподіляємо простір між блоками
+  justify-content: space-between;
   align-items: center;
 
-  // Визначаємо три колонки
   .header-left, .header-right {
-    flex: 1; // Колонки займають однакову ширину
+    flex: 1;
   }
 
   .header-center {
-    flex: 1; // Ви також можете встановити flex: 2; якщо хочете, щоб центр був ширшим
+    flex: 1;
     display: flex;
-    justify-content: center; // Центруємо плейсхолдери
+    justify-content: center;
 
-    // Стиль для тексту плейсхолдерів
-    .ant-typography {
-      color: rgba(0, 0, 0, 0.65); // Cтандартний другорядний колір тексту antd
-      font-weight: 500;
-      cursor: default; // Показуємо, що це не посилання
+    .header-anchor {
+      &.ant-anchor-wrapper {
+        background: none;
+        &::before {
+          display: none;
+        }
+      }
+
+      .ant-anchor-link {
+        padding: 0 16px;
+
+        .ant-anchor-link-title {
+          color: rgba(0, 0, 0, 0.65);
+          font-weight: 500;
+          font-size: 14px;
+          text-decoration: none;
+
+          &:hover {
+            color: rgba(0, 0, 0, 0.85);
+          }
+        }
+
+        &.ant-anchor-link-active {
+          .ant-anchor-link-title {
+            color: #1677ff;
+            font-weight: 600;
+          }
+        }
+      }
     }
   }
 
   .header-right {
     display: flex;
-    justify-content: flex-end; // Притискаємо кнопку до правого краю
+    justify-content: flex-end;
   }
 }

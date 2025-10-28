@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Front-End Developer Intern",
+    "shortDescription": "University System Website",
+    "description": [
+      "Redesigned the motivational module page using new practices and adding new features",
+      "Created a profile settings tab for adding personal contact information",
+      "Updated the directory page for easier searching of teacher contacts and improving the experience"
+    ],
+    "startDate": "06/2025",
+    "endDate": "Ongoing"
+  },
+  {
+    "title": "3rd Year Student at Kherson State University",
+    "shortDescription": "Student of specialty 126 - Information Systems and Technologies",
+    "description": [
+      "Studying and creating basic programs using C++ and Python",
+      "Writing a term paper on creating a public page with a list of university teachers"
+    ],
+    "startDate": "09/2023",
+    "endDate": "06/2027"
+  },
+  {
+    "title": "Studying Front-End Development at Dan-IT",
+    "shortDescription": "Beginning of activity as a Front-End developer",
+    "description": [
+      "Learning to work with HTML, CSS, and JS & creating basic pages",
+      "Working with ReactJS and various NPM modules & creating advanced pages",
+      "Group work with Git",
+      "Final group project on creating a store page using ReactJS, NPM modules, and Git"
+    ],
+    "startDate": "09/2023",
+    "endDate": "09/2024"
+  }
+]

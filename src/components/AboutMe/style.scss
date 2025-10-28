@@ -2,10 +2,9 @@
   padding: 60px 20px;
   max-width: 1200px;
   margin: 0 auto;
+  margin-bottom: 100px;
 
-  // Колонка з фото
   &__photo-col {
-    // На мобільних пристроях змінюємо порядок відображення
     @media (max-width: 767px) {
       order: 1;
     }
@@ -15,7 +14,6 @@
     }
   }
 
-  // Колонка з текстом
   &__text-col {
     @media (max-width: 767px) {
       order: 2;
@@ -26,7 +24,6 @@
     }
   }
 
-  // Обгортка для фото
   &__photo-wrapper {
     display: flex;
     justify-content: center;
@@ -37,7 +34,6 @@
     }
   }
 
-  // Стилі для фото
   &__photo {
     width: 100%;
     max-width: 400px;
@@ -56,7 +52,6 @@
     }
   }
 
-  // Контент (текст)
   &__content {
     display: flex;
     flex-direction: column;
@@ -67,7 +62,6 @@
     }
   }
 
-  // Ім'я
   &__name {
     font-size: 48px;
     font-weight: 700;
@@ -84,7 +78,6 @@
     }
   }
 
-  // Опис
   &__description {
     font-size: 18px;
     line-height: 1.8;
@@ -96,7 +89,6 @@
     }
   }
 
-  // Адаптація Row для зміни порядку на мобільних
   .ant-row {
     @media (max-width: 767px) {
       display: flex;
@@ -105,7 +97,6 @@
   }
 }
 
-// Загальні стилі для анімацій
 @keyframes fadeIn {
   from {
     opacity: 0;
