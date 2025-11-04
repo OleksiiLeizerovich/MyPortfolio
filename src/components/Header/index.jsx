@@ -1,13 +1,13 @@
 import React from 'react';
-import { Layout, Button, Typography, Anchor } from 'antd';
-import { GlobalOutlined } from '@ant-design/icons';
+import { Layout, Button, Typography, Anchor, Switch, Space } from 'antd';
+import { GlobalOutlined, MoonOutlined, SunOutlined } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
-import './style.scss'; // Цей файл ми теж змінимо
+import './style.scss';
 
 const { Header: AntHeader } = Layout;
 const { Text } = Typography;
 
-const Header = () => {
+const Header = ({ isDarkMode, handleThemeChange }) => {
     const { t, i18n } = useTranslation();
 
     const handleLanguageChange = () => {
@@ -49,12 +49,20 @@ const Header = () => {
             </div>
 
             <div className="app-header__right">
-                <Button
-                    icon={<GlobalOutlined />}
-                    onClick={handleLanguageChange}
-                >
-                    {buttonText}
-                </Button>
+                <Space>
+                    <Switch
+                        checkedChildren={<MoonOutlined />}
+                        unCheckedChildren={<SunOutlined />}
+                        checked={isDarkMode}
+                        onChange={handleThemeChange}
+                    />
+                    <Button
+                        icon={<GlobalOutlined />}
+                        onClick={handleLanguageChange}
+                    >
+                        {buttonText}
+                    </Button>
+                </Space>
             </div>
         </AntHeader>
     );
