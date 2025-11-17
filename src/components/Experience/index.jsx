@@ -4,8 +4,9 @@ import { CalendarOutlined, LaptopOutlined } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
 import './style.scss';
 
-import experienceUK from '/src/assets/experienceUK.json'
-import experienceEN from '/src/assets/experienceEN.json'
+import experienceUK from '/src/assets/experienceUK.json';
+import experienceEN from '/src/assets/experienceEN.json';
+import experienceHE from '/src/assets/experienceHE.json';
 
 const { Title, Text, Paragraph } = Typography;
 
@@ -49,12 +50,16 @@ const ExperienceItem = ({ title, shortDescription, description, startDate, endDa
     );
 };
 
+const experienceData = {
+    uk: experienceUK,
+    en: experienceEN,
+    he: experienceHE
+};
+
 const Experience = () => {
     const { t, i18n } = useTranslation();
 
-    const currentExperiences = i18n.language === 'uk'
-        ? experienceUK
-        : experienceEN;
+    const currentExperiences = experienceData[i18n.language] || experienceEN;
 
     return (
         <div id="experience" className="experience">
